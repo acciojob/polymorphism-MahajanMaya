@@ -1,33 +1,35 @@
-Assignment to understand polymorphism.
 
-STEPS:
+import java.util.Scanner;
 
-/*
- * Task 1:
- * create a class Product inside Main class
- *
- * Task 2:
- * create object of Product in Main function called p
- *
- * Task 3:
- * create a method of following defination
- * public int product(int x, int y) {}
- *
- * call this method from Main using Product class object p
- *
- * Task 4:
- * create a Overloaded method product of following defination
- * public int product(int x, int y, int z) {}
- *
- * call this method also from Main using Product class object p
- *
- * Task 5:
- * create a Overloaded method product of following defination
- * public double product(double x, double y) {}
- *
- * call this method also from Main using Product class object p
- *
- * Observations:
- * This class contains 3 classes with same name, but it complie & run successfully
- *
- */
+ public class Main {
+    public static void main(String[] args) {
+        Product p = new Product();
+        
+         // Task 3: Call the method product(int x, int y)
+        System.out.println("Product of 5 and 10 is: " + p.product(5, 10));
+        
+        // Task 4: Call the method product(int x, int y, int z)
+        System.out.println("Product of 2, 3, and 4 is: " + p.product(2, 3, 4));
+        
+        // Task 5: Call the method product(double x, double y)
+        System.out.println("Product of 2.5 and 3.5 is: " + p.product(2.5, 3.5));
+    }
+    
+    public static class Product {
+        // Task 3: Method with int parameters
+        public int product(int x, int y) {
+            return x * y;
+        }
+        
+        // Task 4: Overloaded method with int parameters
+        public int product(int x, int y, int z) {
+            return x * y * z;
+        }
+        
+        // Task 5: Overloaded method with double parameters
+        public double product(double x, double y) {
+            return x * y;
+        }
+    }
+}
+
